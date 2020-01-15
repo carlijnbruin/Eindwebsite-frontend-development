@@ -1,0 +1,1021 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    animation: drop 1s ease;
+}
+
+*:focus{
+    outline: 3px solid gold;
+}
+
+/* bron: klasgenoot Anthony */
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+body{
+    background-color: #F4F4F4;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    body{
+        background-color: lightgray;
+    }
+    #homeContact h2, h3{
+        color: black;
+    }
+}
+
+
+
+
+
+/**************                                **************
+ **************    N A V I G A T I E  B A R    **************
+ **************                                **************/
+
+
+
+
+
+nav{
+    border-bottom: 1px solid lightgray;
+    background-color: white;
+    padding: 2.5em 0em 2.5em 0em;
+}
+
+.linkjes {
+    padding-top: 0.5em;
+    width: 100vw;
+    transition: opacity 1.2s ease-out;
+    opacity: 0;
+    text-align: center;
+}
+
+
+.linkjes > * {
+    font-size: 1.5em;
+    border-bottom: 1px solid lightgray;
+    padding: 0.7em 0em 0.7em 0em;
+    margin: -10em;
+    transition:  0.8s ease-out;    /* hamburger menu langzaam in/uit laten schuiven */
+}
+
+.linkjes.show-search {
+    opacity: 1;
+}
+
+.linkjes.show-search > * {
+    margin: 0;    /* hamburger menu weer in beeld laten komen */
+}
+
+#homeIndex img:first-child{ /* logo */
+    height: 4em;
+    width: auto;
+    position: relative;    /* logo is relatief van normale positie gepositioneerd */
+    top: -2em;
+    left: 2em;
+}
+
+.navigatie li:first-child{    /* Voor als hamburger uitgeklapt is */
+    border-top: 1px solid lightgray;
+}
+
+.navigatie li:last-child{    /* Voor als hamburger uitgeklapt is */
+    border-bottom: none;
+}
+
+li{
+    list-style: none;
+}
+
+.navigatie a{
+    text-decoration: none;
+    color: gray;
+}
+
+@media (pointer: fine){
+    .navigatie a:hover{
+        text-decoration: none;
+        color: black;
+    }
+}
+
+
+/* burger menu */
+
+
+.burger div{
+    width: 25px;
+    height: 6px;
+    background-color: gray;
+    margin: 5px
+}
+
+.burger{
+    position: absolute; /* logo is gepositioneerd van het blok waar het in zit */
+    top: 1.3em;
+    right: 1em;
+}
+
+ul{
+    margin: -2em -0em;    /* Voor de witruimte om linkjes heen als hamburger uitgeklapt is */
+}
+
+
+
+
+
+/**************               **************
+ **************    H O M E    **************
+ **************               **************/
+
+
+
+
+
+#homeIndex li:first-child{
+    text-decoration: underline;
+}
+
+#homeIndex p{
+    font-size: 2em;
+    margin: 0em 0.7em 0em 0.7em;
+    color: grey;
+    line-height: 1.3em;
+    max-width: 18em;
+}
+
+
+#homeIndex span{
+    display: block;
+    font-weight: bold;
+    font-size: 2.1em;
+    color: black;
+    text-shadow: 2px 1px #FF987E;
+    margin: 0.5em 0em 0.5em 0em;
+    line-height: 1.1em;
+}
+
+#homeIndex span:hover{
+    transform: rotate(2deg);
+}
+
+#homeIndex main{
+    padding: 3em 1em 1em 1em;
+    margin-top: 3em;
+}
+
+#homeIndex main a{    /* Button op homepage */
+    display: block;
+    background-color: #FF987D;
+    font-size: 1.6em;
+    padding: 0.5em 0em 0.5em 0em;
+    text-align: center;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    color: white;
+    margin: 1.5em 0.2em 1.5em 0.2em;
+    width: 18em;
+    text-decoration: none;
+}
+
+#homeIndex img{
+    width: auto;
+    max-width: 35em;
+    height: auto;
+}
+
+@media (pointer:fine){
+    #homeIndex main a:hover{     /* Button homepage */
+        padding: 1em 0em 1em 0em;
+        transition: .5s;
+        max-width: none;
+        font-weight: bold;
+        color: black;
+}
+
+
+
+
+
+/* Mediaqueries Home */
+
+#homeGridContainer{
+    display: grid;
+    }
+
+@media (min-width:48em){
+    #homeGridContainer{
+        grid-template-columns: 2fr 1fr;
+     }
+    #homeGridContainer main{
+        padding: 5em 1em 0em 1em;
+    }
+    #homeIndex main a{
+        margin-left: 1em;
+    }
+    .navigatie ul{    /* navigatie voor grotere viewport*/
+        display: flex;
+        justify-content: flex-end;
+    }
+    .navigatie nav{
+        display:flex;
+    }
+    nav{
+        padding: 3em 0em 0em 0em;
+    }
+
+    .burger div{
+        display: none;
+    }
+
+    .linkjes > * {
+        border: none;
+        margin: 0em 1em 0em 0em;
+        padding: 0.6em 0em 0em 0em;
+    }
+    .linkjes {
+        opacity: 1;
+    }
+
+    .navigatie li:first-child{
+        border-top: none;
+    }
+
+}
+
+
+
+
+
+/**************                            **************
+ **************       P O R T F O L I O    **************
+ **************                            **************/
+
+
+
+
+
+#homePortfolio li:nth-of-type(2){
+    text-decoration: underline;
+}
+
+#homePortfolio img:first-child{    /* Logo */
+    height: 4em;
+    width: auto;
+    position: relative;
+    top: -2em;
+    left: 2em;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+
+#homePortfolio h1{
+    text-align: center;
+    margin: 0em 0em 1em 0em;
+    padding: 0.7em;
+    border-bottom: 3px solid lightgrey;
+    border-top: 3px solid lightgrey;
+    color: #FF987D;
+    text-shadow: 1px 1px white;
+    background-color: white;
+}
+
+
+#homePortfolio article{    /* Tekst onder blokken article */
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#homePortfolio a{
+    text-decoration: none;
+}
+
+
+
+
+
+/* VISUAL INTERFACE DESIGN */
+
+
+
+
+
+#homePortfolio article:first-of-type img{
+    margin-top: -4.5em;
+    width: 15em;
+    max-width: 32em;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.5;
+}
+
+#homePortfolio article:first-of-type img:hover{
+    opacity: 1;
+    transition: 0.8s;
+}
+
+#homePortfolio article:first-of-type{
+    background-color: #BCB9D8;
+    border-radius: 20px;
+    padding: 2em 1em 2em 1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    width: 17em;
+    height: 16em;;
+}
+
+#homePortfolio article:first-of-type h2{
+    color: black;
+    margin: 0em 0em 1em 0em;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    bottom: -9.45em;
+    left: -0.84em;
+    font-size: 1.2em;
+    background-color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 0.5em;
+    width: 14.20em;
+}
+
+
+
+
+
+/* HEEL HOLLAND BAKT */
+
+
+
+
+
+#homePortfolio article:nth-of-type(2) img{
+    margin-top: -4.4em;
+    width: 15em;
+    max-width: 32em;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.5;
+    }
+
+#homePortfolio article:nth-of-type(2) img:hover{
+    opacity: 1;
+    transition: 0.8s;
+}
+
+#homePortfolio article:nth-of-type(2){
+    background-color: #EEC2DB;
+    border-radius: 20px;
+    padding: 2em 1em 2em 1em;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    width: 17em;
+    height: 16em;;
+}
+
+#homePortfolio article:nth-of-type(2) h2{
+    color: black;
+    margin: 0em 0em 1em 0em;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    bottom: -9.45em;
+    left: -0.82em;
+    font-size: 1.2em;
+    background-color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 0.5em;
+    width: 14.16em;
+}
+
+
+
+
+
+/* INSTAGRAM ONDERZOEKSCASE */
+
+
+
+
+
+#homePortfolio article:nth-of-type(3) img{
+    margin-top: -4.5em;
+    width: 15em;
+    max-width: 32em;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.5;
+}
+
+#homePortfolio article:nth-of-type(3) img:hover{
+    opacity: 1;
+    transition: 0.8s;
+}
+
+#homePortfolio article:nth-of-type(3){
+    background-color: #FCFFBC;
+    border-radius: 20px;
+    padding: 2em 1em 2em 1em;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    width: 17em;
+    height: 16em;
+}
+
+#homePortfolio article:nth-of-type(3) h2{
+    color: black;
+    margin: 0em 0em 1em 0em;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    bottom: -9.45em;
+    left: -0.84em;
+    font-size: 1.2em;
+    background-color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 0.5em;
+    width: 14.16em;
+}
+
+
+
+
+
+/* Vormgeving 1 */
+
+
+
+
+
+#homePortfolio article:nth-of-type(4){
+    background-color: #FCFFBC;
+    border-radius: 20px;
+    padding: 2em 1em 2em 1em;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    width: 17em;
+    height: 16em;;
+}
+
+#homePortfolio article:nth-of-type(4) h2{
+    background-color: black;
+    color: black;
+    margin: 0em 0em 1em 0em;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    bottom: -9.45em;
+    left: -0.82em;
+    font-size: 1.2em;
+    background-color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 0.5em;
+    width: 14.16em;
+}
+
+
+
+
+
+/* HEEL HOLLAND BAKT */
+
+
+
+
+
+#homePortfolio article:nth-of-type(5){
+    background-color: #FCFFBC;
+    border-radius: 20px;
+    padding: 2em 1em 2em 1em;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    width: 17em;
+    height: 16em;;
+}
+
+#homePortfolio article:nth-of-type(5) h2{
+    color: black;
+    margin: 0em 0em 1em 0em;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    bottom: -9.45em;
+    left: -0.82em;
+    font-size: 1.2em;
+    background-color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 0.5em;
+    width: 14.16em;
+}
+
+
+
+
+
+/* Plastic Whale */
+
+
+
+
+
+#homePortfolio article:nth-of-type(6){
+    background-color: #FCFFBC;
+    border-radius: 20px;
+    padding: 2em 1em 2em 1em;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    width: 17em;
+    height: 16em;;
+}
+
+#homePortfolio article:nth-of-type(6) h2{
+    color: black;
+    margin: 0em 0em 1em 0em;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    bottom: -9.45em;
+    left: -0.82em;
+    font-size: 1.2em;
+    background-color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 0.5em;
+    width: 14.16em;
+}
+
+
+
+
+
+/* Mediaqueries Portfolio */
+
+#homePortfolio section{
+    display: grid;
+}
+
+@media (min-width: 50em){
+    #homePortfolio section{
+         grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 76em){
+    #homePortfolio section{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+
+
+
+/**************                      **************
+ **************    O V E R  M I J    **************
+ **************                      **************/
+
+
+
+
+
+#homeOverMij article{
+    background-color: white;
+    padding: 2em 0em 2em 1em;
+}
+
+#homeOverMij li:nth-of-type(3){    /* Linkje in nav van die pagina */
+    text-decoration: underline gray;
+}
+
+#homeOverMij img:first-child{    /* logo */
+    height: 4em;
+    width: auto;
+    position: relative;
+    top: -2em;
+    left: 2em;
+}
+
+#homeOverMij h1{
+    text-align: center;
+    margin: 0em 0em 1em 0em;
+    padding: 0.7em;
+    border-bottom: 3px solid lightgrey;
+    border-top: 3px solid lightgrey;
+    color: #FF987D;
+    text-shadow: 1px 1px white;
+    background-color: white;
+}
+
+#homeOverMij h2{
+    margin: 0em 1em 0em 1em;
+    font-weight: bold;
+    font-size: 2em;
+    color: black;
+}
+
+#homeOverMij p{
+    margin: 1em 0em 0em 2em;
+    color: grey;
+    max-width: 25em;
+}
+
+#homeOverMij section img:first-of-type{
+    max-width: 32em;
+    height: auto;
+    width: auto;
+    margin: 2em 0em 2em 0em;
+}
+
+@media (pointer:fine){
+    #homeOverMij section img:first-of-type:hover{
+        transform: rotate(360deg);
+        transition: 2s;
+    }
+    #homeOverMij section img:last-of-type:hover{
+        transform: rotate(360deg);
+        transition: 2s;
+    }
+}
+
+#homeOverMij section img:last-of-type{
+    max-width: 32em;
+    height: auto;
+    width: auto;
+    margin: 2em 0em 0em 0em;
+}
+
+
+
+
+
+/* Mediaqueries Over Mij*/
+
+#homeOverMij section{
+    display: grid;
+}
+
+@media (min-width:68em){
+    #homeOverMij section {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 1em;
+     }
+    #homeOverMij article:first-of-type{
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        margin: 0em 0em 1.5em 4em;
+        background-color: white;
+        max-width: 32em;
+        padding: 2em 0em;
+     }
+    #homeOverMij section img:first-of-type{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        margin: 0em;
+     }
+    #homeOverMij article:last-of-type{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        margin: 1em 0em 0em 0em;
+        background-color: white;
+        max-width: 32em;
+        padding: 2em 0em;
+    }
+
+    #homeOverMij section img:last-of-type{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        margin: 1em 0em 0 4em;
+     }
+}
+
+
+
+
+
+/**************                        **************
+ **************       C O N T A C T    **************
+ **************                        **************/
+
+
+
+
+
+#homeContact{
+    margin left: auto;
+    margin right: auto;
+}
+
+#homeContact li:nth-of-type(4){    /* Linkje in nav huidige pagina */
+    text-decoration: underline gray;
+}
+
+#homeContact img:first-child{    /* Logo */
+    height: 4em;
+    width: auto;
+    position: relative;
+    top: -2em;
+    left: 2em;
+}
+
+
+#homeContact h1{
+    text-align: center;
+    margin: 0em 0em 1em 0em;
+    padding: 0.7em;
+    border-bottom: 3px solid lightgrey;
+    border-top: 3px solid lightgrey;
+    color: #FF987D;
+    text-shadow: 1px 1px white;
+    background-color: white;
+}
+
+#homeContact h2{
+    font-size: 1.5em;
+    margin: 0em 0em 0em 1.2em;
+}
+
+#homeContact p.contacttekst{
+    color: grey;
+    margin: 1.5em 0em 0em 1.4em;
+    max-width: 27em;
+    font-size: 1.2em;
+}
+
+#homeContact adress ul li:first-of-type{
+    margin: 3em 0em 1em 1.8em;
+}
+
+#homeContact adress ul li:nth-of-type(2){
+    margin: 2em 0em 1em 1.8em;
+}
+
+#homeContact adress ul li:nth-of-type(3){
+    margin: 2em 0em 1em 1.8em;
+}
+
+#homeContact h3{
+    margin: 1em 1em 1.5em 0em;
+}
+
+#homeContact #linkerColumnGrid{
+    margin: 0em auto 0em auto;
+}
+
+@media (pointer: fine){
+    #homeContact adress ul li a{
+        text-decoration: none;
+        background-color: white;
+        padding: 1em;
+        color: black;
+        border: 2px solid #FF987D;
+        border-radius: 5px;
+    }
+    #homeContact adress ul li a:hover{
+        transition: 1s;
+        background-color: #FF987D;
+        color: black;
+        padding: 1.5em;
+    }
+}
+
+
+@media (pointer: coarse){
+    #homeContact adress ul li a{
+        background-color: #FF987D;
+        color: black;
+        padding: 1.5em;
+    }
+}
+
+
+
+
+
+/* Contact formulier */
+
+
+
+
+
+#homeContact form{
+    margin: 5em auto -1em auto;
+    background-color: white;
+    padding: 0em 0em 1em 0em;
+}
+
+#homeContact label, input, fieldset{
+    display:block;
+    padding: 0.3em
+}
+
+#homeContact fieldset{
+    margin: 1em;
+    padding: 1em;
+    border: none;
+}
+
+#homeContact legend{
+    font-weight: bold;
+    margin: 0.5em;
+    padding: 1em 0em 0em 0em;
+    font-size: 1.5em;
+}
+
+#homeContact fieldset p{
+    font-size: 1.3em;
+    margin: 0.9em 0em -0.5em 0.3em;
+    color: black;
+}
+
+#homeContact input[type="checkbox"]{
+    width: 1.5em;
+    float: left;
+    margin: 0em 0em 0em 0em;
+}
+
+#homeContact input[type="checkbox"]:checked{
+    background-color: green;
+}
+
+#homeContact input{
+    margin: 0.2em auto 0em auto;
+    padding: 0.5em 11em 0.5em 0em;
+    font-size: 1.2em;
+    background-color: white;
+    border-color: gold;
+}
+
+#homeContact input:focus{
+    background-color: lightgoldenrodyellow;
+    outline: 3px solid black;
+}
+
+#homeContact label{
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+#homeContact label:nth-of-type(7){
+    margin-top: 1em;
+}
+
+#homeContact label:last-of-type input{
+    padding: 0em 6em 10em 5em;
+}
+
+#homeContact textarea{
+    margin: 0.5em 0em 0em 0em;
+    padding: 1em;
+    width: 100%;
+    height: 20em;
+    border: 2px solid gold;
+}
+
+#homeContact textarea{
+    margin: 0.5em 0em 0em 0em;
+    padding: 1em;
+    width: 100%;
+    height: 20em;
+    border: 2px solid gold;
+    font-size: 1em;
+}
+
+#homeContact textarea:focus{
+    outline-color: black;
+    background-color: lightgoldenrodyellow;
+}
+
+#homeContact input[type="email"]:invalid{
+    background-color: lightcoral;
+}
+
+#homeContact input[type="email"]:valid{
+    background-color: lightgreen;
+}
+
+#homeContact #moetIngevuld{
+    margin-left: 2.5em;
+}
+
+#homeContact button{
+    display: block;
+    background-color: #FF987D;
+    font-size: 1.6em;
+    padding: 0.5em 0em 0.5em 0em;
+    text-align: center;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    color: white;
+    margin: 1.5em auto 1.5em auto;
+    width: 15em;
+    text-decoration: none;
+}
+
+@media (pointer: fine){
+    #homeContact button:hover{
+        padding: 1em 0em 1em 0em;
+        transition: .5s;
+        max-width: none;
+        font-weight: bold;
+        color: black;
+    }
+}
+
+#homeContact h4{
+    color: green;
+    margin: 1em 1.2em;
+    font-size: 1.5em;
+}
+
+
+
+
+
+/* Mediaqueries Contact */
+
+#homeContact #ContactGridContainer{
+    display: grid;
+}
+
+@media (min-width:56em){
+    #homeContact #ContactGridContainer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 1em;
+    }
+    #homeContact #linkerColumnGrid{
+        grid-column-start: 1;
+    }
+    #homeContact form{
+        margin: -1.5em auto -40em auto;
+    }
+}
+
+
+
+
+
+/* Mediaqueries Bedanktpagina */
+
+#homeContact #ContactGridContainer{
+    display: grid;
+}
+
+@media (min-width:56em){
+    #homeContact #ContactGridContainer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 1em;
+     }
+    #homeContact #linkerColumnGrid{
+        grid-column-start: 1;
+    }
+    #homeContact h4{
+        color: green;
+        width: 70%;
+    }
+}

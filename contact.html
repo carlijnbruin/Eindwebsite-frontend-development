@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link href="styles/styles.css" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Carlijn Bruin</title>
+</head>
+
+<body id="homeContact">
+
+
+
+<!--navigatie balk bovenin-->
+
+
+
+    <header class="navigatie">
+        <nav>
+           <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+               <ul class="linkjes">
+                   <li><a href="index.html">Home</a></li>
+                   <li><a href="portfolio.html">Portfolio</a></li>
+                   <li><a href="overmij.html">Over mij</a></li>
+                   <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+               <div class="burger">
+                   <div class="line1"></div>
+                   <div class="line2"></div>
+                   <div class="line3"></div>
+               </div>
+        </nav>
+    </header>
+
+
+
+<!-- Content pagina -->
+
+
+
+<h1>Contact</h1>
+
+<div id="ContactGridContainer">
+    <div id="linkerColumnGrid">
+        <h2>Hey you!</h2>
+        <p class="contacttekst">Heeft u vragen, kan ik u ergens mee helpen of heeft u zin om met mij te babbelen?</p>
+        <p class="contacttekst">Neem dan gerust contact met mij op!</p>
+
+
+    <adress>
+        <ul>
+            <li><h3>E-mail:</h3>
+                <a href="mailto:info@carlijnbruin.nl">info@carlijnbruin.nl</a></li>
+            <li><h3>Mobiel:</h3>
+                <a href="tel:06-11743636">+31 6 117 436 36</a></li>
+            <li><h3>Linkedin</h3>
+                <a href="www.linkedin.com/in/carlijnbruin">www.linkedin.com/in/carlijnbruin</a></li>
+        </ul>
+    </adress>
+</div>
+
+
+<form action="bedanktpagina.html">
+    <fieldset>
+        <legend>Contact formulier</legend>
+
+        <label>Naam *
+            <input required type="text"></label>
+
+        <label>Achternaam
+            <input type="text"></label>
+
+        <label>Telefoonnummer
+            <input type="tel"></label>
+
+
+
+        <p>Reden van contact</p>
+        <label>Ik heb een vraag
+            <input  class="checkboxForm" type="checkbox"></label>
+
+        <label> Ik heb een opdracht voor je
+            <input  class="checkboxForm" type="checkbox"></label>
+
+        <label> Zomaar
+            <input  type="checkbox" class="checkboxForm" ></label>
+
+        <label> E-mail adres *
+            <input type="email" required></label>
+
+        <label> Vraag of opmerking *
+            <textarea required></textarea></label>
+
+    </fieldset>
+    <p id="moetIngevuld">* = moet ingevuld worden</p>
+    <button>Verstuur</button>
+</form>
+</div>
+
+
+
+<script src="javascript/portfolio.js" type="text/javascript"></script>
+</body>
+</html> 
