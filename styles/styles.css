@@ -119,7 +119,7 @@ li{
     width: 25px;
     height: 6px;
     background-color: gray;
-    margin: 5px
+    margin: 5px;
 }
 
 .burger{
@@ -886,13 +886,14 @@ ul{
     margin: 0.2em auto 0em auto;
     padding: 0.5em 11em 0.5em 0em;
     font-size: 1.2em;
-    background-color: white;
     border-color: gold;
 }
 
-#homeContact input:focus{
+#homeContact input:focus {
     background-color: lightgoldenrodyellow;
-    outline: 3px solid black;
+    outline: 3px solid gold;
+    transform: scale(1.05, 1.05);
+    transition: 1s;
 }
 
 #homeContact label{
@@ -914,28 +915,40 @@ ul{
     width: 100%;
     height: 20em;
     border: 2px solid gold;
+    font-size: 1em;
 }
 
-#homeContact textarea{
-    margin: 0.5em 0em 0em 0em;
-    padding: 1em;
-    width: 100%;
-    height: 20em;
-    border: 2px solid gold;
-    font-size: 1em;
+#homeContact textarea:valid{
+    background-color: #B2DBB5;
+}
+
+#homeContact textarea:invalid{
+    background-color: lightcoral;
+    outline-color: red
 }
 
 #homeContact textarea:focus{
     outline-color: black;
-    background-color: lightgoldenrodyellow;
+    background-color: white;
+    transform: scale(1.05, 1.05);
+    transition: 1s;
+}
+
+#homeContact input:valid{
+        background-color: #B2DBB5;
+    }
+
+#homeContact input:invalid{
+        background-color: lightcoral;
+    }
+
+
+#homeContact input[type="email"]:valid{
+    background-color: #B2DBB5;
 }
 
 #homeContact input[type="email"]:invalid{
     background-color: lightcoral;
-}
-
-#homeContact input[type="email"]:valid{
-    background-color: lightgreen;
 }
 
 #homeContact #moetIngevuld{
