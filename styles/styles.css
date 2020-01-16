@@ -929,7 +929,6 @@ ul{
 
 #homeContact textarea:focus{
     outline-color: black;
-    background-color: white;
     transform: scale(1.05, 1.05);
     transition: 1s;
 }
